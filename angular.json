@@ -121,6 +121,46 @@
           }
         }
       }
+    },
+    "ng-progress-stepper": {
+      "root": "projects/ng-progress-stepper",
+      "sourceRoot": "projects/ng-progress-stepper/src",
+      "projectType": "library",
+      "prefix": "ng",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-progress-stepper/tsconfig.lib.json",
+            "project": "projects/ng-progress-stepper/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ng-progress-stepper/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-progress-stepper/src/test.ts",
+            "tsConfig": "projects/ng-progress-stepper/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-progress-stepper/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-progress-stepper/tsconfig.lib.json",
+              "projects/ng-progress-stepper/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ng-progress-stepper-lib-app"
