@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="progress-bar">
+    <ul class="progress-bar-inner">
+      <li class="tick {{step.status}}" *ngFor="let step of steps">
+        <div class="dot">
+          <div class="dot-inner"></div>
+        </div>
+        <div class="label">{{step.label}}</div>
+        <div class="bar">
+          <div class="bar-inner"></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
