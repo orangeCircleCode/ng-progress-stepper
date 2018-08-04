@@ -1,0 +1,8 @@
+{
+  "name": "ng-progress-stepper",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:orangeCircleCode/ng-progress-stepper.git",
+  "author": "Andrew Kemp <andrew@ankemp.com>",
+  "license": "MIT"
+}
